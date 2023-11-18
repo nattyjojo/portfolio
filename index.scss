@@ -1,0 +1,100 @@
+body {
+  margin: 0;
+  font-family: "Barlow", sans-serif;
+  font-family: "Poppins", sans-serif;
+  font-family: "Roboto", sans-serif;
+}
+* {
+  padding: 0;
+  margin: 0;
+}
+a {
+  text-decoration: none;
+  display: inline;
+}
+
+a {
+  color: #e5e3fa;
+}
+
+.portfolio {
+  margin: 0;
+  height: 100vh;
+
+  display: flex;
+  &__contact {
+    padding: 20px;
+    color: #e5e3fa;
+    background-color: #3e00ce;
+    flex: 20%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    text-decoration: none;
+    font-family: "Barlow", sans-serif;
+    font-weight: 900;
+    &--logo {
+      color: #e5e3fa;
+      font-weight: 900;
+      font-size: 30px;
+    }
+  }
+
+  &__profile {
+    flex: 30%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    &--bar {
+      display: flex;
+    }
+  }
+  &__about {
+    overflow: scroll;
+    position: relative;
+    flex: 50%;
+    padding: 20px;
+    &--details {
+      text-align: right;
+    }
+    &--article {
+      // position: absolute;
+      width: 80%;
+      margin: 24% 0 0 20px;
+      //top: 33%;
+      //left: 40px;
+      color: #8f8f8f;
+      overflow: hidden;
+      line-height: 30px;
+    }
+  }
+}
+
+.blue {
+  padding: 16px 0;
+  background-color: #3e00ce;
+  width: 30%;
+  border-radius: 0 0;
+}
+.white {
+  padding: 16px 0;
+  width: 70%;
+  color: black;
+  text-align: right;
+}
+
+.smallBar {
+  padding: 2px;
+  background-color: #3e00ce;
+  position: absolute;
+  width: 20%;
+  top: 50%;
+  left: 85%;
+}
+.profilePhoto {
+  background-image: url("./assets/avaterJohn.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  padding: 50%;
+  margin: 0;
+}
