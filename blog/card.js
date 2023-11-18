@@ -1,8 +1,8 @@
 const card = `
 <section class="card" style="width: 95%; margin-top: 50px;   padding: 20px; border-radius: 10px;">
 <div style="display: flex; justify-content: space-around; position: relative;">
-    <img  src="../assets/desktop.png" width="100%" style=""  alt="">
-    <img  src="../assets/mobile.png" width="25%" style="position: absolute; right: 0%; bottom: 25px;"  alt="">
+    <img  src="./assets/desktop.png" width="100%" style=""  alt="">
+    <img  src="./assets/mobile.png" width="25%" style="position: absolute; right: 0%; bottom: 25px;"  alt="">
 
 </div>
 

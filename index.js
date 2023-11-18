@@ -1,4 +1,5 @@
 import card from "./blog/card.js";
+
 const aboutContent = document.getElementById("aboutContent");
 const showPortfolio = document.getElementById("showPortfolio");
 const portfolio__profile = document.getElementById("profile");
@@ -25,7 +26,8 @@ showPortfolio.addEventListener("click", () => {
 const smallBar = document.getElementById("smallBar");
 const logoMobile = document.getElementById("logoMobile");
 const mobileFooter = document.getElementById("mobileFooter");
-window.addEventListener("resize", (event) => {
+
+const handleScreenResize = () => {
   const currentWindowSize = window.innerWidth;
   if (currentWindowSize < 1500) {
     smallBar.style.display = "none";
@@ -52,4 +54,6 @@ window.addEventListener("resize", (event) => {
     mobileFooter.style.display = "none";
   }
   console.log(currentWindowSize);
-});
+};
+document.addEventListener("DOMContentLoaded", handleScreenResize);
+window.addEventListener("resize", handleScreenResize);
