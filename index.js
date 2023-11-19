@@ -10,6 +10,25 @@ const portfolio__contact = document.getElementById("contactSection");
 const moreDetails = document.getElementById("moreDetails");
 const dropDowmMenu = document.getElementById("dropDowmMenu");
 const cards = document.getElementsByClassName("card");
+const faAnimations = [
+  `fa-beat`,
+  `fa-beat-fade`,
+  `fa-bounce`,
+  `fa-fade`,
+  `fa-flip`,
+  `fa-shake`,
+  `fa-spin`,
+  `fa-spin-reverse`,
+  `fa-spin-pulse`,
+];
+const getFaAnimations = document.getElementsByClassName("faAnimations");
+
+console.log(getFaAnimations[0].classList.length);
+setInterval(() => {
+  const randomNumber = Math.floor(Math.random() * 10);
+  getFaAnimations[0].classList.remove(getFaAnimations[0].classList[2]);
+  getFaAnimations[0].classList.add(faAnimations[randomNumber]);
+}, 1000);
 
 const displaySites = () => {
   portfolio__profile.style.display = "none";
@@ -46,9 +65,7 @@ const handleScreenResize = () => {
   } else {
     smallBar.style.display = "block";
   }
-  // if (cards.length > 0) {
-  //   portfolio__profile.style.display = "none";
-  // }
+
   if (currentWindowSize < 970) {
     aboutContent.style.left = "20px";
     aboutContent.style.position = "absolute";
