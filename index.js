@@ -1,27 +1,39 @@
-import card from "./blog/card.js";
+//import card from "./blog/card.js";
+import siteDetails from "./sitesDetails.js";
+import generateSite from "./blog/card.js";
 
 const aboutContent = document.getElementById("aboutContent");
 const showPortfolio = document.getElementById("showPortfolio");
+const portfolioBtn = document.getElementById("portfolioBtn");
 const portfolio__profile = document.getElementById("profile");
 const portfolio__contact = document.getElementById("contactSection");
 const moreDetails = document.getElementById("moreDetails");
 const dropDowmMenu = document.getElementById("dropDowmMenu");
+const cards = document.getElementsByClassName("card");
 
-const about = document.getElementById("about");
-showPortfolio.addEventListener("click", () => {
+const displaySites = () => {
   portfolio__profile.style.display = "none";
   aboutContent.style.display = "none";
   portfolio__contact.style.flex = "2%";
-  const cards = document.getElementsByClassName("card");
   if (cards.length === 0) {
-    const setAbout = about.insertAdjacentHTML("beforeend", card);
+    for (let i = 0; i < siteDetails.length; i++) {
+      const getSite = generateSite(i);
+
+      const setAbout = about.insertAdjacentHTML("beforeend", getSite);
+    }
   }
+
   if (cards.length > 0) {
-    portfolio__profile.style.display = "none";
+    const title = (document.title = "John | Portfolio");
+    //portfolio__profile.style.display = "none";
     moreDetails.open = false;
     moreDetails.style.zIndex = 1;
   }
-});
+};
+
+const about = document.getElementById("about");
+showPortfolio.addEventListener("click", displaySites);
+portfolioBtn.addEventListener("click", displaySites);
 
 const smallBar = document.getElementById("smallBar");
 const logoMobile = document.getElementById("logoMobile");
@@ -34,12 +46,17 @@ const handleScreenResize = () => {
   } else {
     smallBar.style.display = "block";
   }
+  // if (cards.length > 0) {
+  //   portfolio__profile.style.display = "none";
+  // }
   if (currentWindowSize < 970) {
     aboutContent.style.left = "20px";
     aboutContent.style.position = "absolute";
     portfolio__profile.style.display = "none";
   } else {
-    portfolio__profile.style.display = "block";
+    cards.length > 0
+      ? (portfolio__profile.style.display = "none")
+      : (portfolio__profile.style.display = "block");
   }
   if (currentWindowSize < 650) {
     portfolio__contact.style.display = "none";
@@ -53,7 +70,6 @@ const handleScreenResize = () => {
     logoMobile.style.display = "none";
     mobileFooter.style.display = "none";
   }
-  console.log(currentWindowSize);
 };
 document.addEventListener("DOMContentLoaded", handleScreenResize);
 window.addEventListener("resize", handleScreenResize);
