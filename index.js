@@ -28,7 +28,7 @@ setInterval(() => {
   const randomNumber = Math.floor(Math.random() * 10);
   getFaAnimations[0].classList.remove(getFaAnimations[0].classList[2]);
   getFaAnimations[0].classList.add(faAnimations[randomNumber]);
-}, 1000);
+}, 5000);
 
 const displaySites = () => {
   portfolio__profile.style.display = "none";

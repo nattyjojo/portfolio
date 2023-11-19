@@ -4,8 +4,8 @@ const generateSite = (index) => {
   const card = `
 <section class="card" style="width: 95%; margin-top: 50px;   padding: 20px; border-radius: 10px;">
 <div style="display: flex; justify-content: space-around; position: relative;">
-    <img  src=${siteDetails[index].desktop} width="100%" style=""  alt="">
-    <img  src=${siteDetails[index].mobile} width="25%" style="position: absolute; right: 0%; bottom: 25px;"  alt="">
+    <img  src=${siteDetails[index].desktop} width="100%"   alt=${siteDetails[index].name}>
+    <img  src=${siteDetails[index].mobile} width="25%" style="position: absolute; right: 0%; bottom: 25px;"   alt=${siteDetails[index].name}>
 
 </div>
 
