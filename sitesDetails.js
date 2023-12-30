@@ -1,5 +1,16 @@
 const siteDetails = [
   {
+    mobile: `./assets/resident-mobile.gif`,
+    desktop: `./assets/resident-desktop.gif`,
+    visitLink: `https://residentapp.johnchimezie.online/`,
+    repoLink: `https://github.com/nattyjojo/residentApp`,
+    contributors: `John`,
+    contributorsGithub: `https://github.com/nattyjojo?tab=repositories`,
+    condition: `Visit Site`,
+    name: "ResidentApp",
+    discription: `ResidentApp is a dynamic resident app designed to add an element of surprise to your daily Housing management`,
+  },
+  {
     mobile: `./assets/mobile.png`,
     desktop: `./assets/desktop.png`,
     visitLink: `https://whimsical-melomakarona-344a50.netlify.app`,
